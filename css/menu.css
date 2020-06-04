@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio- Name</title>
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <style>
-                 
-                 body { 
+     
+            body { 
                 overflow: hidden;
                 margin: 0;
                 padding: 0;
@@ -331,80 +322,3 @@
             .nav-icon:hover span:nth-child(3) {
                 width: 100%;
             } 
-        </style>
-    </head>
-    <body>
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script>var $j = $.noConflict(true);</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/scroll.js"></script>
-        <header>
-            <div class="nav-icon float-right">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>
-        
-        <!-- Full Menu -->
-        <div class="full-menu">
-            <div class="fullmenu-content">
-                <div>
-                <ul class="page-menu">
-                    <li><a class="active" href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog Posts</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="#">Buy Now</a></li>
-                </ul>
-                </div>
-                <div class="social">
-                    <a href="#"><div class="fab fa-github"></div></a>
-                    <a href="#"><div class="fab fa-facebook-f"></div></a>
-                    <a href="#"><div class="fab fa-twitter"></div></a>
-                    <a href="#"><div class="fab fa-instagram"></div></a>
-                </div>
-            </div>
-            <a href="#0" class="modal-close"></a>
-        </div>
-        <div class="cd-transition-layer visible opening"> 
-            <div class="bg-layer"></div>
-        </div>
-        <div class='div-first'>
-            <h1 id="div-first">
-                <a href="" class="typewrite" data-period="1000" data-type='[ "Hi, I&#39m &#128526; Mr. FAbhishek Adhikari.", "&#128514; Ok, no need to call me Mr.", "🌐 I mostly reside in the web.", "👨‍💻 I am a Full-Stack Developer.", "I Love 🐍 Python.", "I&#39m a Freelancer.", "Jai Hind !!! " ]'>
-                  <span class="wrap"></span>
-              </a>
-            </h1>
-            <ul>
-                <li>
-                  <a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-github"></i></a></li>
-                   
-                </li>
-              </ul>
-            <a class="arrow" href="#div-second"></a>
-        </div>
-        <div class='div-second' id='div-second'>
-            <div class="profile-container">
-                <img src="media/Profile_Steam.jpg" />
-                <h2>Abhishek Adhikari</h2>
-                <h3>Kharagpur, India</h3>
-            </div>
-            <a class="arrow" id='arrow-second' href="#div-third"></a>
-        </div>
-        <script src="js/typewriter.js"></script>
- 
- <script src="js/menu.js">
-// document load end 
-
-
-
-
-
- </script>
-
-    </body>
-</html>

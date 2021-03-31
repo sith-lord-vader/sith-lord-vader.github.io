@@ -53,7 +53,7 @@ export const Typewriter = () => {
 				<b>I'm</b>&nbsp;
 				<span ref={text} />
 			</div>
-			<MouseScroll link="#profile" />
+			<MouseScroll link="profile" />
 		</div>
 	);
 };

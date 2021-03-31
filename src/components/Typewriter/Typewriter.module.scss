@@ -13,6 +13,12 @@
 		margin-bottom: 20px;
 		background: url('../../assets/images/typewriter/foreground.jpg');
 		background-clip: text;
+		transition: 0.7s ease-out;
+		cursor: pointer;
+		&:hover {
+			background-position-y: -100px;
+			transition: 1s ease-in;
+		}
 	}
 	.text {
 		width: 100%;

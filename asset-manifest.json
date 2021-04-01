@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.96a22901.chunk.css",
-    "main.js": "/static/js/main.61bfb8b8.chunk.js",
-    "main.js.map": "/static/js/main.61bfb8b8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4f2e03bd.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4f2e03bd.js.map",
+    "main.css": "/static/css/main.2fec9db5.chunk.css",
+    "main.js": "/static/js/main.9ec97715.chunk.js",
+    "main.js.map": "/static/js/main.9ec97715.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1678680c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1678680c.js.map",
     "static/css/2.ddb151f1.chunk.css": "/static/css/2.ddb151f1.chunk.css",
-    "static/js/2.8751a0b4.chunk.js": "/static/js/2.8751a0b4.chunk.js",
-    "static/js/2.8751a0b4.chunk.js.map": "/static/js/2.8751a0b4.chunk.js.map",
-    "static/js/3.13ffbadc.chunk.js": "/static/js/3.13ffbadc.chunk.js",
-    "static/js/3.13ffbadc.chunk.js.map": "/static/js/3.13ffbadc.chunk.js.map",
+    "static/js/2.c7b17e31.chunk.js": "/static/js/2.c7b17e31.chunk.js",
+    "static/js/2.c7b17e31.chunk.js.map": "/static/js/2.c7b17e31.chunk.js.map",
+    "static/js/3.21af60eb.chunk.js": "/static/js/3.21af60eb.chunk.js",
+    "static/js/3.21af60eb.chunk.js.map": "/static/js/3.21af60eb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.ddb151f1.chunk.css.map": "/static/css/2.ddb151f1.chunk.css.map",
-    "static/css/main.96a22901.chunk.css.map": "/static/css/main.96a22901.chunk.css.map",
-    "static/js/2.8751a0b4.chunk.js.LICENSE.txt": "/static/js/2.8751a0b4.chunk.js.LICENSE.txt",
+    "static/css/main.2fec9db5.chunk.css.map": "/static/css/main.2fec9db5.chunk.css.map",
+    "static/js/2.c7b17e31.chunk.js.LICENSE.txt": "/static/js/2.c7b17e31.chunk.js.LICENSE.txt",
     "static/media/Typewriter.module.scss": "/static/media/foreground.77afbd71.jpg",
+    "static/media/mac.afa427db.jpg": "/static/media/mac.afa427db.jpg",
+    "static/media/MyWorks.module.scss": "/static/media/patternpad (3).d142d237.svg",
+    "static/media/sim-fuel-1.cd6a0be4.png": "/static/media/sim-fuel-1.cd6a0be4.png",
+    "static/media/skilltally.a4786d04.png": "/static/media/skilltally.a4786d04.png",
+    "static/media/sndevs.78e7717a.png": "/static/media/sndevs.78e7717a.png",
     "static/media/Profile.module.scss": "/static/media/wave.ce04b1dc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f2e03bd.js",
+    "static/js/runtime-main.1678680c.js",
     "static/css/2.ddb151f1.chunk.css",
-    "static/js/2.8751a0b4.chunk.js",
-    "static/css/main.96a22901.chunk.css",
-    "static/js/main.61bfb8b8.chunk.js"
+    "static/js/2.c7b17e31.chunk.js",
+    "static/css/main.2fec9db5.chunk.css",
+    "static/js/main.9ec97715.chunk.js"
   ]
 }

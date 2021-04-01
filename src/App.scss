@@ -18,6 +18,7 @@ body {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr auto;
+	grid-template-columns: 100%;
 }
 
 ::-webkit-scrollbar-track {
@@ -102,4 +103,8 @@ body {
 .list {
 	list-style: none;
 	padding: 10px 0px 0px 10px;
+}
+
+.switch-wrapper {
+	width: 100%;
 }

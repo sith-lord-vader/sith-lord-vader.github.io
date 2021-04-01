@@ -1,7 +1,101 @@
 .main {
 	width: 100%;
 	min-height: 100vh;
-	display: grid;
-	place-content: center;
 	color: gainsboro;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background: url('../../assets/images/profile/patternpad\ \(3\).svg');
+}
+
+.carouselDisplay {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	.carouselButton {
+		position: absolute;
+		top: calc(50% - 1rem);
+		font-size: 3rem;
+		right: 15px;
+		color: red;
+		text-shadow: black 3px 3px 3px;
+		cursor: pointer;
+	}
+	.carouselButton:first-child {
+		left: 15px;
+	}
+	.carousel {
+		width: calc(100% - 6rem);
+		height: 80%;
+		overflow: hidden;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-height: 100%;
+			border-radius: 20px;
+			opacity: 1;
+			transition: 1s ease;
+		}
+	}
+}
+
+.detailsMain {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	// border-radius: 10px;
+	// background: rgba(0, 0, 0, 0.315);
+	backdrop-filter: blur(10px);
+	h1 {
+		color: wheat;
+	}
+	p {
+		margin-top: 20px;
+		width: 30rem;
+		max-width: 80%;
+		text-align: justify;
+		font-weight: bolder;
+		font-size: 1rem;
+	}
+}
+
+.techUsed {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 10px;
+	span {
+		border-radius: 10px;
+		padding: 5px;
+		color: black;
+		font-weight: bold;
+		cursor: pointer;
+		&:hover {
+			filter: brightness(1.2);
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.carouselDisplay {
+		.carousel {
+			img {
+				max-width: 90%;
+			}
+		}
+	}
 }

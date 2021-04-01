@@ -2,13 +2,14 @@ import './App.scss';
 import { Footer } from './components/Footer/Footer';
 import { Typewriter } from './components/Typewriter/Typewriter';
 import { Profile } from './components/Profile/Profile';
-import { Route, Switch, Link, NavLink } from 'react-router-dom';
+import { Route, Link, NavLink } from 'react-router-dom';
 import { MyWorks } from './components/MyWorks/MyWorks';
 import { ContactMe } from './components/ContactMe/ContactMe';
 import { StyledOffCanvas, Menu, Overlay } from 'styled-off-canvas';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { AnimatedSwitch } from 'react-router-transition';
 
 function App() {
 	const [ isOpen, setIsOpen ] = useState(false);
@@ -18,7 +19,6 @@ function App() {
 			<button onClick={() => setIsOpen(!isOpen)} className="hamburger">
 				<FontAwesomeIcon icon={faBars} />
 			</button>
-
 			<Menu className="Menu">
 				<ul className="list">
 					<li className="closeButton">
@@ -43,24 +43,25 @@ function App() {
 					</li>
 				</ul>
 			</Menu>
-
 			<Overlay />
-
 			<div className="app">
-				<div>
-					<Switch>
-						<Route path="/works">
-							<MyWorks />
-						</Route>
-						<Route path="/contact-me">
-							<ContactMe />
-						</Route>
-						<Route exact path="/">
-							<Typewriter />
-							<Profile />
-						</Route>
-					</Switch>
-				</div>
+				<AnimatedSwitch
+					atEnter={{ opacity: 0 }}
+					atLeave={{ opacity: 0 }}
+					atActive={{ opacity: 1 }}
+					className="switch-wrapper"
+				>
+					<Route path="/works">
+						<MyWorks />
+					</Route>
+					<Route path="/contact-me">
+						<ContactMe />
+					</Route>
+					<Route exact path="/">
+						<Typewriter />
+						<Profile />
+					</Route>
+				</AnimatedSwitch>
 				<Footer />
 			</div>
 		</StyledOffCanvas>

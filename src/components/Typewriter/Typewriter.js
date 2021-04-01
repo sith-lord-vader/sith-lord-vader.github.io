@@ -17,6 +17,7 @@ export const Typewriter = () => {
 		var j = 0;
 		var forward = true;
 		var list = listOfText.current;
+		document.title = 'Abhishek Adhikari 😉 | Cool Dev';
 		const interval = setInterval(() => {
 			if (i < list.length) {
 				if (forward) {
@@ -44,7 +45,9 @@ export const Typewriter = () => {
 				}
 			}
 		}, 120);
-		return () => clearInterval(interval);
+		return () => {
+			clearInterval(interval);
+		};
 	}, []);
 	return (
 		<div className={s.main}>

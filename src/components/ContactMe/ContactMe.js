@@ -5,10 +5,8 @@ import { useEffect } from 'react';
 
 export const ContactMe = () => {
 	useEffect(() => {
-		const title = document.title;
 		document.title = 'Contact Me | Abhishek Adhikari';
-		return () => (document.title = title);
-	});
+	}, []);
 	return (
 		<div className={s.main}>
 			<div>

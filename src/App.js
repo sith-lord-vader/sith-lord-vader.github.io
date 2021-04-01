@@ -1,32 +1,69 @@
 import './App.scss';
-import { Button, Layout } from 'antd';
-import { Fragment } from 'react';
 import { Footer } from './components/Footer/Footer';
 import { Typewriter } from './components/Typewriter/Typewriter';
 import { Profile } from './components/Profile/Profile';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, Link, NavLink } from 'react-router-dom';
 import { MyWorks } from './components/MyWorks/MyWorks';
 import { ContactMe } from './components/ContactMe/ContactMe';
+import { StyledOffCanvas, Menu, Overlay } from 'styled-off-canvas';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+	const [ isOpen, setIsOpen ] = useState(false);
+
 	return (
-		<div className="app">
-			<div>
-				<Switch>
-					<Route path="/works">
-						<MyWorks />
-					</Route>
-					<Route path="/contact-me">
-						<ContactMe />
-					</Route>
-					<Route exact path="/">
-						<Typewriter />
-						<Profile />
-					</Route>
-				</Switch>
+		<StyledOffCanvas isOpen={isOpen} onClose={() => setIsOpen(false)}>
+			<button onClick={() => setIsOpen(!isOpen)} className="hamburger">
+				<FontAwesomeIcon icon={faBars} />
+			</button>
+
+			<Menu className="Menu">
+				<ul className="list">
+					<li className="closeButton">
+						<button onClick={() => setIsOpen(false)}>
+							<FontAwesomeIcon icon={faWindowClose} />
+						</button>
+					</li>
+					<li className="nav-links">
+						<NavLink exact to="/" activeClassName="linkActive">
+							Home
+						</NavLink>
+					</li>
+					<li className="nav-links">
+						<NavLink to="/works" activeClassName="linkActive">
+							My Works
+						</NavLink>
+					</li>
+					<li className="nav-links">
+						<NavLink to="/contact-me" activeClassName="linkActive">
+							Contact Me
+						</NavLink>
+					</li>
+				</ul>
+			</Menu>
+
+			<Overlay />
+
+			<div className="app">
+				<div>
+					<Switch>
+						<Route path="/works">
+							<MyWorks />
+						</Route>
+						<Route path="/contact-me">
+							<ContactMe />
+						</Route>
+						<Route exact path="/">
+							<Typewriter />
+							<Profile />
+						</Route>
+					</Switch>
+				</div>
+				<Footer />
 			</div>
-			<Footer />
-		</div>
+		</StyledOffCanvas>
 	);
 }
 

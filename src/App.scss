@@ -33,3 +33,73 @@ body {
 ::-webkit-scrollbar-thumb {
 	background-color: #cc0808;
 }
+
+.hamburger {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	background: #36d1dc;
+	background: linear-gradient(45deg, #5b86e5, #36d1dc);
+	color: #1f1f1f;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	padding: 10px;
+	z-index: 10;
+	cursor: pointer;
+
+	&:hover {
+		background: linear-gradient(15deg, #5b86e5, #36d1dc);
+		border: none;
+		outline: none;
+	}
+}
+
+.closeButton {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	button {
+		border: none;
+		outline: none;
+		background: none;
+		margin: 5px;
+		font-size: 2rem;
+		color: rgb(147, 71, 223);
+		cursor: pointer;
+
+		&:hover {
+			color: rgb(159, 64, 255);
+			cursor: pointer;
+		}
+	}
+	::marker {
+		display: none;
+	}
+}
+
+.linkActive {
+	color: wheat !important;
+}
+
+.nav-links {
+	a {
+		color: gainsboro;
+		font-weight: bold;
+		padding: 10px;
+		font-size: 1.7rem;
+	}
+}
+
+.Menu {
+	background: #000000;
+	background: linear-gradient(45deg, #202020, #0e0e0e, #000000);
+	box-shadow: rgba(0, 0, 0, 0.603) 0px -2px 3px;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+.list {
+	list-style: none;
+	padding: 10px 0px 0px 10px;
+}

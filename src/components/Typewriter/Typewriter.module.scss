@@ -15,6 +15,7 @@
 		background-clip: text;
 		transition: 0.7s ease-out;
 		cursor: pointer;
+		animation: slide 600s infinite linear forwards;
 		&:hover {
 			background-position-y: -100px;
 			transition: 1s ease-in;
@@ -25,6 +26,15 @@
 		text-align: center;
 		font-size: 3rem;
 		padding: 5px;
+	}
+}
+
+@keyframes slide {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 600vw;
 	}
 }
 

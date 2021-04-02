@@ -6,6 +6,7 @@ import sndevsImage from '../../assets/images/MyWorks/sndevs.png';
 import simFuelImage from '../../assets/images/MyWorks/sim-fuel-1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { animateScroll } from 'react-scroll';
 
 const projects = [
 	{
@@ -54,6 +55,7 @@ export const MyWorks = () => {
 	const [ projectNo, setProjectNo ] = useState(0);
 	useEffect(() => {
 		document.title = 'My Works | Abhishek Adhikari';
+		animateScroll.scrollToTop();
 	}, []);
 	const increment = () => {
 		if (projectNo === projects.length - 1) {

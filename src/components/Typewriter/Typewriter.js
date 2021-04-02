@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { MouseScroll } from '../MouseScroll/MouseScroll';
 import s from './Typewriter.module.scss';
+import { animateScroll } from 'react-scroll';
 
 export const Typewriter = () => {
 	const text = useRef(null);
@@ -13,6 +14,7 @@ export const Typewriter = () => {
 	]);
 
 	useEffect(() => {
+		animateScroll.scrollToTop();
 		var i = 0;
 		var j = 0;
 		var forward = true;

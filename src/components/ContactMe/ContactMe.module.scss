@@ -1,7 +1,208 @@
 .main {
 	width: 100%;
 	min-height: 100vh;
-	display: grid;
-	place-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: gainsboro;
+	background-color: #000000;
+	background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+}
+
+.formDiv {
+	width: 30rem;
+	max-width: 85%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border-radius: 10px;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.404) 3px 3px 4px;
+	h1 {
+		font-family: 'Roboto', sans-serif;
+		font-weight: bolder;
+		font-size: 4rem;
+	}
+	form {
+		width: 80%;
+		div {
+			width: 100%;
+			margin: 32px 0px 32px 0px;
+			height: 4.9rem;
+			position: relative;
+			overflow: hidden;
+			label {
+				color: rgb(99, 99, 99);
+				font-weight: bold;
+				font-size: 1rem;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				&::before {
+					content: '';
+					position: absolute;
+					left: -100%;
+					bottom: 1px;
+					height: 100%;
+					width: 100%;
+					z-index: 5;
+					border-bottom: #b82e1f solid 4px;
+					transition: 0.5s ease-out;
+				}
+			}
+			input:focus ~ label {
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 1px;
+					height: 100%;
+					width: 100%;
+					z-index: 5;
+					border-bottom: #b82e1f solid 4px;
+					transition: 1s ease-in;
+				}
+			}
+			input:valid ~ label {
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 1px;
+					height: 100%;
+					width: 100%;
+					z-index: 5;
+					border-bottom: #b82e1f solid 4px;
+					transition: 1s ease-in;
+				}
+			}
+			input {
+				width: 100%;
+				position: absolute;
+				bottom: 2px;
+				left: 0;
+				z-index: 1;
+				border: none;
+				border-bottom: grey solid 2px;
+				height: 3rem;
+				outline: none;
+				background: none;
+				color: black;
+				font-weight: 600;
+				font-size: 1.5rem;
+				&:hover,
+				&:active,
+				&:focus {
+					border: none;
+					border-bottom: grey solid 2px;
+					outline: none;
+				}
+			}
+		}
+
+		.text {
+			width: 100%;
+			margin: 32px 0px 32px 0px;
+			position: relative;
+			overflow: hidden;
+			height: calc(8rem + 1px);
+			label {
+				color: rgb(99, 99, 99);
+				font-weight: bold;
+				font-size: 1rem;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				&::before {
+					content: '';
+					position: absolute;
+					left: -100%;
+					bottom: 0;
+					height: 100%;
+					width: 100%;
+					border-bottom: #b82e1f solid 4px;
+				}
+			}
+			textarea:focus ~ label {
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 1px;
+					height: 100%;
+					width: 100%;
+					z-index: 5;
+					border-bottom: #b82e1f solid 4px;
+					transition: 1s ease-in;
+				}
+			}
+			textarea:valid ~ label {
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 1px;
+					height: 100%;
+					width: 100%;
+					z-index: 5;
+					border-bottom: #b82e1f solid 4px;
+					transition: 1s ease-in;
+				}
+			}
+			textarea {
+				width: 100%;
+				border: none;
+				border-bottom: grey solid 2px;
+				outline: none;
+				color: black;
+				top: 2rem;
+				height: 6rem;
+				position: absolute;
+				font-weight: 600;
+				font-size: 1.5rem;
+				&:hover,
+				&:active,
+				&:focus {
+					border: none;
+					border-bottom: grey solid 2px;
+					outline: none;
+				}
+			}
+		}
+	}
+	button {
+		width: 100%;
+		padding: 10px;
+		margin: 20px 0px 20px 0px;
+		border-radius: 10px;
+		display: block;
+		background: #c33764;
+		background: linear-gradient(to right, #1d2671, #c33764);
+		background-size: 200% 100%;
+		background-position-x: 100%;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: white;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		transition: 0.2s ease-out;
+		box-shadow: rgba(0, 0, 0, 0.445) 2px 2px 4px;
+		&:hover {
+			background-position-x: 0;
+			transition: 0.2s ease-in;
+		}
+	}
+}
+
+.thanks {
+	color: white;
+	font-weight: bold;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 3.5rem;
+	padding: 5px;
+	text-align: center;
 }

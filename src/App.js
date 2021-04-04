@@ -14,6 +14,7 @@ import ReactGA from 'react-ga';
 import RouterChangeTracker from './components/RouterChangeTracker/RouterChangeTracker';
 
 ReactGA.initialize('UA-181634162-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
 	const [ isOpen, setIsOpen ] = useState(false);

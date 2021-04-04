@@ -13,7 +13,7 @@ import { AnimatedSwitch } from 'react-router-transition';
 import ReactGA from 'react-ga';
 import RouterChangeTracker from './components/RouterChangeTracker/RouterChangeTracker';
 
-ReactGA.initialize('G-THYBX1J2L0');
+ReactGA.initialize('UA-181634162-1');
 
 function App() {
 	const [ isOpen, setIsOpen ] = useState(false);

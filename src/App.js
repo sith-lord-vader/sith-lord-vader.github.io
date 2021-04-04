@@ -10,12 +10,16 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { AnimatedSwitch } from 'react-router-transition';
+import ReactGA from 'react-ga';
+import RouterChangeTracker from './components/RouterChangeTracker/RouterChangeTracker';
+
+ReactGA.initialize('G-XEW3MMXDGT');
 
 function App() {
 	const [ isOpen, setIsOpen ] = useState(false);
-
 	return (
 		<StyledOffCanvas isOpen={isOpen} onClose={() => setIsOpen(false)}>
+			<RouterChangeTracker />
 			<button onClick={() => setIsOpen(!isOpen)} className="hamburger">
 				<FontAwesomeIcon icon={faBars} />
 			</button>

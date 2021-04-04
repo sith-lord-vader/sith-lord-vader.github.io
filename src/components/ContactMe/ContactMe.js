@@ -1,13 +1,13 @@
-import { faWrench } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import s from './ContactMe.module.scss';
 import { useEffect } from 'react';
 import { animateScroll } from 'react-scroll';
 import { useForm, ValidationError } from '@formspree/react';
+import ReactGA from 'react-ga';
 
 export const ContactMe = () => {
 	const [ state, handleSubmit ] = useForm('mgereepk');
 	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search, 'Contact Me');
 		document.title = 'Contact Me | Abhishek Adhikari';
 		animateScroll.scrollToTop();
 	}, []);

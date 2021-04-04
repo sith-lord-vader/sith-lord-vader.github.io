@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { MouseScroll } from '../MouseScroll/MouseScroll';
 import s from './Typewriter.module.scss';
 import { animateScroll } from 'react-scroll';
+import ReactGA from 'react-ga';
 
 export const Typewriter = () => {
 	const text = useRef(null);
@@ -14,6 +15,7 @@ export const Typewriter = () => {
 	]);
 
 	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search, 'Homepage');
 		animateScroll.scrollToTop();
 		var i = 0;
 		var j = 0;

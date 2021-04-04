@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import s from './MyWorks.module.scss';
 import macImage from '../../assets/images/MyWorks/mac.jpg';
 import skillTallyImage from '../../assets/images/MyWorks/skilltally.png';
@@ -7,6 +7,7 @@ import simFuelImage from '../../assets/images/MyWorks/sim-fuel-1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { animateScroll } from 'react-scroll';
+import ReactGA from 'react-ga';
 
 const projects = [
 	{
@@ -54,6 +55,7 @@ const colorPairs = [
 export const MyWorks = () => {
 	const [ projectNo, setProjectNo ] = useState(0);
 	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search, 'My Works');
 		document.title = 'My Works | Abhishek Adhikari';
 		animateScroll.scrollToTop();
 	}, []);

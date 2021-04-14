@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { animateScroll } from 'react-scroll';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const projects = [
 	{
@@ -56,7 +57,6 @@ export const MyWorks = () => {
 	const [ projectNo, setProjectNo ] = useState(0);
 	useEffect(() => {
 		ReactGA.pageview(window.location.pathname + window.location.search, 'My Works');
-		document.title = 'My Works | Abhishek Adhikari';
 		animateScroll.scrollToTop();
 	}, []);
 	const increment = () => {
@@ -75,6 +75,9 @@ export const MyWorks = () => {
 	};
 	return (
 		<div className={s.main}>
+			<Helmet>
+				<title>My Works | Abhishek Adhikari</title>
+			</Helmet>
 			<div className={s.container}>
 				<div className={s.carouselDisplay}>
 					<div className={s.carouselButton} onClick={decrement}>
@@ -82,7 +85,7 @@ export const MyWorks = () => {
 					</div>
 					<div className={s.carousel}>
 						{projects.map((e, i) => (
-							<Fragment>{projectNo === i ? <img src={e.image} alt={e.name} /> : ''}</Fragment>
+							<Fragment key={i}>{projectNo === i ? <img src={e.image} alt={e.name} /> : ''}</Fragment>
 						))}
 					</div>
 					<div className={s.carouselButton} onClick={increment}>
@@ -91,7 +94,7 @@ export const MyWorks = () => {
 				</div>
 				<div className={s.detailsMain}>
 					{projects.map((e, i) => (
-						<Fragment>
+						<Fragment key={i}>
 							{projectNo === i ? (
 								<div className={s.details}>
 									<h1>{e.name}</h1>

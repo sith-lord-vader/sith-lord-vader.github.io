@@ -3,6 +3,7 @@ import { MouseScroll } from '../MouseScroll/MouseScroll';
 import s from './Typewriter.module.scss';
 import { animateScroll } from 'react-scroll';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 export const Typewriter = () => {
 	const text = useRef(null);
@@ -21,7 +22,6 @@ export const Typewriter = () => {
 		var j = 0;
 		var forward = true;
 		var list = listOfText.current;
-		document.title = 'Abhishek Adhikari 😉 | Cool Dev';
 		const interval = setInterval(() => {
 			if (i < list.length) {
 				if (forward) {
@@ -55,6 +55,9 @@ export const Typewriter = () => {
 	}, []);
 	return (
 		<div className={s.main}>
+			<Helmet>
+				<title>Abhishek Adhikari 😉 | Cool Dev</title>
+			</Helmet>
 			<h1>ABHISHEK ADHIKARI</h1>
 			<div className={s.text}>
 				<b>I'm</b>&nbsp;

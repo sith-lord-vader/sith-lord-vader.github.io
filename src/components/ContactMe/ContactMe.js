@@ -3,16 +3,19 @@ import { useEffect } from 'react';
 import { animateScroll } from 'react-scroll';
 import { useForm, ValidationError } from '@formspree/react';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 export const ContactMe = () => {
 	const [ state, handleSubmit ] = useForm('mgereepk');
 	useEffect(() => {
 		ReactGA.pageview(window.location.pathname + window.location.search, 'Contact Me');
-		document.title = 'Contact Me | Abhishek Adhikari';
 		animateScroll.scrollToTop();
 	}, []);
 	return (
 		<div className={s.main}>
+			<Helmet>
+				<title>Contact Me | Abhishek Adhikari</title>
+			</Helmet>
 			{state.succeeded ? (
 				<h1 className={s.thanks}>Thanks For Contacting!!! 😃</h1>
 			) : (

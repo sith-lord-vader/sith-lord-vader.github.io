@@ -2,7 +2,7 @@ import './App.scss';
 import { Footer } from './components/Footer/Footer';
 import { Typewriter } from './components/Typewriter/Typewriter';
 import { Profile } from './components/Profile/Profile';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import { MyWorks } from './components/MyWorks/MyWorks';
 import { ContactMe } from './components/ContactMe/ContactMe';
 import { StyledOffCanvas, Menu, Overlay } from 'styled-off-canvas';
@@ -11,15 +11,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { AnimatedSwitch } from 'react-router-transition';
 import ReactGA from 'react-ga';
-import RouterChangeTracker from './components/RouterChangeTracker/RouterChangeTracker';
+import DynamicSitemap from 'react-dynamic-sitemap';
+import { Helmet } from 'react-helmet';
+import { PageNotFound } from './components/404/PageNotFound';
 
 ReactGA.initialize('UA-181634162-1');
 
-function App() {
+const Sitemap = (props) => {
+	return <DynamicSitemap routes={Routes} prettify={true} {...props} />;
+};
+
+const Routes = () => {
+	return (
+		<AnimatedSwitch
+			atEnter={{ opacity: 0 }}
+			atLeave={{ opacity: 0 }}
+			atActive={{ opacity: 1 }}
+			className="switch-wrapper"
+		>
+			<Route path="/works" sitemapIndex={true} priority={1} changefreq="weekly">
+				<MyWorks />
+			</Route>
+			<Route path="/contact-me" sitemapIndex={true} priority={1} changefreq="weekly">
+				<ContactMe />
+			</Route>
+			<Route path="/sitemap" sitemapIndex={false}>
+				<Sitemap />
+			</Route>
+			<Route exact path="/" sitemapIndex={true} priority={1} changefreq="daily">
+				<Typewriter />
+				<Profile />
+			</Route>
+			<Route path="*">
+				<PageNotFound />
+			</Route>
+		</AnimatedSwitch>
+	);
+};
+
+export const App = () => {
 	const [ isOpen, setIsOpen ] = useState(false);
 	return (
 		<StyledOffCanvas isOpen={isOpen} onClose={() => setIsOpen(false)}>
-			{/* <RouterChangeTracker /> */}
 			<button onClick={() => setIsOpen(!isOpen)} className="hamburger">
 				<FontAwesomeIcon icon={faBars} />
 			</button>
@@ -49,27 +82,12 @@ function App() {
 			</Menu>
 			<Overlay />
 			<div className="app">
-				<AnimatedSwitch
-					atEnter={{ opacity: 0 }}
-					atLeave={{ opacity: 0 }}
-					atActive={{ opacity: 1 }}
-					className="switch-wrapper"
-				>
-					<Route path="/works">
-						<MyWorks />
-					</Route>
-					<Route path="/contact-me">
-						<ContactMe />
-					</Route>
-					<Route exact path="/">
-						<Typewriter />
-						<Profile />
-					</Route>
-				</AnimatedSwitch>
+				<Helmet>
+					<title>Abhishek Adhikari 😉 | Cool Dev</title>
+				</Helmet>
+				<Routes />
 				<Footer />
 			</div>
 		</StyledOffCanvas>
 	);
-}
-
-export default App;
+};

@@ -22,12 +22,12 @@ export const PageNotFound = () => {
 		return check;
 	};
 	useEffect(() => {
-		window.addEventListener('mousemove', (e) => {
-			torch.current.style.top = `${e.pageY}px`;
-			torch.current.style.left = `${e.pageX}px`;
-		});
 		if (!mobileCheck()) {
 			setMobile(false);
+			window.addEventListener('mousemove', (e) => {
+				torch.current.style.top = `${e.pageY}px`;
+				torch.current.style.left = `${e.pageX}px`;
+			});
 		}
 	}, []);
 	return (

@@ -43,19 +43,20 @@
 }
 
 .torch {
-	height: 12rem;
-	width: 12rem;
+	height: 18rem;
+	width: 18rem;
 	border-radius: 50%;
 	position: fixed;
 	transform: translate(-50%, -50%);
 	box-shadow: rgba(0, 0, 0, 0.975) 0 0 0 9999em;
 	pointer-events: none;
+	backdrop-filter: blur(1px);
 	&::after {
 		content: '';
 		display: block;
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
-		box-shadow: inset black 0 0 5px 5px;
+		box-shadow: inset black 0 0 2rem 2rem;
 	}
 }

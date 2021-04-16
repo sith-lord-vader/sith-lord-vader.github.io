@@ -6,9 +6,12 @@ import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import neonAudioMp3 from '../../assets/audio/neon.mp3';
+import neonAudioOgg from '../../assets/audio/neon.ogg';
 
 export const Typewriter = () => {
 	const text = useRef(null);
+	const neon = useRef(null);
 	const listOfText = useRef([
 		'a Full-Stack Web Developer     ',
 		'a Student     ',
@@ -16,6 +19,16 @@ export const Typewriter = () => {
 		'a Freelancer     ',
 		'a Cool Guy     '
 	]);
+
+	const playAudio = () => {
+		neon.current.play();
+		neon.current.volume = 0.2;
+	};
+
+	const stopAudio = () => {
+		neon.current.currentTime = 0;
+		neon.current.pause();
+	};
 
 	useEffect(() => {
 		ReactGA.pageview(window.location.pathname + window.location.search, 'Homepage');
@@ -65,14 +78,28 @@ export const Typewriter = () => {
 				<b>I'm</b>&nbsp;
 				<span ref={text} />
 			</div>
+			<audio style={{ display: 'none' }} ref={neon} loop={false} volume={0.5}>
+				<source src={neonAudioMp3} />
+				<source src={neonAudioOgg} />
+				Your browser isn't invited for super fun audio time.
+			</audio>
 			<div className={s.social}>
-				<a href="https://github.com/abhishekadhikari23" rel="noreferrer" target="_blank" className={s.github}>
+				<a
+					href="https://github.com/abhishekadhikari23"
+					rel="noreferrer"
+					target="_blank"
+					onMouseEnter={playAudio}
+					onMouseLeave={stopAudio}
+					className={s.github}
+				>
 					<FontAwesomeIcon icon={faGithub} />
 				</a>
 				<a
 					href="https://www.linkedin.com/in/abhishek-a-b00840114/"
 					rel="noreferrer"
 					target="_blank"
+					onMouseEnter={playAudio}
+					onMouseLeave={stopAudio}
 					className={s.linkedin}
 				>
 					<FontAwesomeIcon icon={faLinkedin} />
@@ -81,11 +108,20 @@ export const Typewriter = () => {
 					href="https://www.instagram.com/abhiayush23/"
 					rel="noreferrer"
 					target="_blank"
+					onMouseEnter={playAudio}
+					onMouseLeave={stopAudio}
 					className={s.instagram}
 				>
 					<FontAwesomeIcon icon={faInstagram} />
 				</a>
-				<a href="https://www.facebook.com/abhiayush23" rel="noreferrer" target="_blank" className={s.facebook}>
+				<a
+					href="https://www.facebook.com/abhiayush23"
+					rel="noreferrer"
+					target="_blank"
+					onMouseEnter={playAudio}
+					onMouseLeave={stopAudio}
+					className={s.facebook}
+				>
 					<FontAwesomeIcon icon={faFacebookF} />
 				</a>
 			</div>

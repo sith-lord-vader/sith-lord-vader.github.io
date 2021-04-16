@@ -70,6 +70,7 @@
 		&:hover {
 			&::before {
 				transition: 0.4s;
+				transition-delay: 0.07s;
 			}
 			svg {
 				transition: 0.4s;

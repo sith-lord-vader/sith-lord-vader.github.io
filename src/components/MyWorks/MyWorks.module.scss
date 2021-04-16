@@ -8,6 +8,9 @@
 	width: 100%;
 	min-height: 100vh;
 	background: url('../../assets/images/profile/patternpad\ \(3\).svg');
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .carouselDisplay {

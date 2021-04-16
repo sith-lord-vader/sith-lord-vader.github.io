@@ -38,10 +38,139 @@
 	}
 }
 
+.social {
+	margin-top: 1.7rem;
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+	a {
+		position: relative;
+		width: 4rem;
+		height: 4rem;
+		background: #171515;
+		color: #666;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.5rem;
+		box-shadow: black 0px 0px 10px 4px;
+		&::before {
+			position: absolute;
+			content: '';
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+			transition: 0.3s;
+		}
+		svg {
+			transition: 0.3s;
+		}
+		&:hover {
+			&::before {
+				transition: 0.4s;
+			}
+			svg {
+				transition: 0.4s;
+				transition-delay: 0.2s;
+			}
+		}
+	}
+}
+
+.facebook {
+	&:hover {
+		&::before {
+			box-shadow: #4267b2 0px 0px 10px 4px;
+		}
+		svg {
+			color: #456cba;
+			filter: drop-shadow(0px 0px 4px #4267b2);
+		}
+	}
+}
+
+.instagram {
+	&:hover {
+		&::before {
+			box-shadow: #e1306c 0px 0px 10px 4px;
+		}
+		svg {
+			color: #e23670;
+			filter: drop-shadow(0px 0px 4px #e1306c);
+		}
+	}
+}
+
+.linkedin {
+	&:hover {
+		&::before {
+			box-shadow: #2867b2 0px 0px 10px 4px;
+		}
+		svg {
+			color: #2a6cbb;
+			filter: drop-shadow(0px 0px 4px #2867b2);
+		}
+	}
+}
+
+.github {
+	&:hover {
+		&::before {
+			box-shadow: rgb(211, 211, 211) 0px 0px 10px 4px;
+		}
+		svg {
+			color: rgb(228, 228, 228);
+			filter: drop-shadow(0px 0px 4px rgb(211, 211, 211));
+		}
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.main {
 		h1 {
 			font-size: 4.5rem;
+		}
+	}
+
+	.facebook {
+		&::before {
+			box-shadow: #4267b2 0px 0px 10px 4px;
+		}
+		svg {
+			color: #456cba;
+			filter: drop-shadow(0px 0px 4px #4267b2);
+		}
+	}
+
+	.instagram {
+		&::before {
+			box-shadow: #e1306c 0px 0px 10px 4px;
+		}
+		svg {
+			color: #e23670;
+			filter: drop-shadow(0px 0px 4px #e1306c);
+		}
+	}
+
+	.linkedin {
+		&::before {
+			box-shadow: #2867b2 0px 0px 10px 4px;
+		}
+		svg {
+			color: #2a6cbb;
+			filter: drop-shadow(0px 0px 4px #2867b2);
+		}
+	}
+
+	.github {
+		&::before {
+			box-shadow: rgb(211, 211, 211) 0px 0px 10px 4px;
+		}
+		svg {
+			color: rgb(228, 228, 228);
+			filter: drop-shadow(0px 0px 4px rgb(211, 211, 211));
 		}
 	}
 }

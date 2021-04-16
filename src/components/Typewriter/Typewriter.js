@@ -4,6 +4,8 @@ import s from './Typewriter.module.scss';
 import { animateScroll } from 'react-scroll';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export const Typewriter = () => {
 	const text = useRef(null);
@@ -62,6 +64,30 @@ export const Typewriter = () => {
 			<div className={s.text}>
 				<b>I'm</b>&nbsp;
 				<span ref={text} />
+			</div>
+			<div className={s.social}>
+				<a href="https://github.com/abhishekadhikari23" rel="noreferrer" target="_blank" className={s.github}>
+					<FontAwesomeIcon icon={faGithub} />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/abhishek-a-b00840114/"
+					rel="noreferrer"
+					target="_blank"
+					className={s.linkedin}
+				>
+					<FontAwesomeIcon icon={faLinkedin} />
+				</a>
+				<a
+					href="https://www.instagram.com/abhiayush23/"
+					rel="noreferrer"
+					target="_blank"
+					className={s.instagram}
+				>
+					<FontAwesomeIcon icon={faInstagram} />
+				</a>
+				<a href="https://www.facebook.com/abhiayush23" rel="noreferrer" target="_blank" className={s.facebook}>
+					<FontAwesomeIcon icon={faFacebookF} />
+				</a>
 			</div>
 			<MouseScroll link="profile" />
 		</div>

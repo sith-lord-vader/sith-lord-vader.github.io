@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import s from './PageNotFound.module.scss';
-import DeviceMotion from 'react-device-motion';
 
 export const PageNotFound = () => {
 	const torch = useRef(null);

@@ -3,5 +3,69 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 5px;
+	flex-direction: column;
+	padding: 0.5rem;
+	background: #1f262a;
+	text-align: center;
+	font-size: 1rem;
+	position: relative;
+	.middle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		a {
+			background: #ff5f6d;
+			background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+			background: linear-gradient(to right, #ffc371, #ff5f6d);
+			background-clip: text;
+			color: transparent;
+			font-weight: bolder;
+		}
+		span {
+			&:last-child {
+				font-weight: bolder;
+			}
+		}
+	}
+}
+
+.top {
+	ul {
+		margin: 0;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		list-style: none;
+		font-size: 1.7rem;
+		a {
+			color: gainsboro;
+		}
+	}
+}
+
+.github {
+	&:hover {
+		color: rgb(59, 59, 59);
+	}
+}
+
+.linkedin {
+	&:hover {
+		color: #2a6cbb;
+	}
+}
+
+.instagram {
+	&:hover {
+		color: #e23670;
+	}
+}
+
+.facebook {
+	&:hover {
+		color: #456cba;
+	}
 }

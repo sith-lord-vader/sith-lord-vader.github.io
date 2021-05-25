@@ -95,7 +95,7 @@ export const Typewriter = () => {
 					<FontAwesomeIcon icon={faGithub} />
 				</a>
 				<a
-					href="https://www.linkedin.com/in/abhishek-a-b00840114/"
+					href="https://www.linkedin.com/in/abhiayush23/"
 					rel="noreferrer"
 					target="_blank"
 					onMouseEnter={playAudio}

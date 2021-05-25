@@ -14,6 +14,7 @@ import ReactGA from 'react-ga';
 import DynamicSitemap from 'react-dynamic-sitemap';
 import { Helmet } from 'react-helmet';
 import { PageNotFound } from './components/404/PageNotFound';
+import { BlogsArticlesFull } from './components/BlogsArticles/BlogsArticles';
 
 ReactGA.initialize('UA-181634162-1');
 
@@ -34,6 +35,9 @@ const Routes = () => {
 			</Route>
 			<Route path="/contact-me" sitemapIndex={true} priority={1} changefreq="weekly">
 				<ContactMe />
+			</Route>
+			<Route path="/blog" sitemapIndex={true} priority={1} changefreq="weekly">
+				<BlogsArticlesFull />
 			</Route>
 			<Route path="/sitemap" sitemapIndex={false}>
 				<Sitemap />

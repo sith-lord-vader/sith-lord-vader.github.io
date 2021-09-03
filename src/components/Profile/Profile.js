@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Gravatar from 'react-gravatar';
 import { Link } from 'react-router-dom';
 import s from './Profile.module.scss';
+import { AgeFromDate } from 'age-calculator';
 
 export const Profile = () => {
 	return (
@@ -15,7 +16,10 @@ export const Profile = () => {
 						<div className={s.name}>
 							Hola! I'm <span style={{ color: '#CD5088' }}>Abhishek Adhikari</span>
 						</div>
-						<div className={s.extraDetails}>20 y.o., B.Tech in Computer Science and Engineering</div>
+						<div className={s.extraDetails}>
+							{new AgeFromDate(new Date(2000, 6, 23)).age} y.o., B.Tech in Computer Science and
+							Engineering
+						</div>
 						<p>
 							I may look serious n boring but I'm rather funny and cool. I'm currently learning Ionic
 							Framework. Ask me anything about React, Next.Js, SCSS, Typescript, UI/UX and Figma.

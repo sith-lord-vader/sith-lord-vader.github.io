@@ -13,7 +13,6 @@
 		"@testing-library/user-event": "^12.8.3",
 		"age-calculator": "^1.0.0",
 		"antd": "^4.15.0",
-		"node-sass": "^5.0.0",
 		"react": "^17.0.2",
 		"react-devdotto": "^1.2.9",
 		"react-device-motion": "^0.1.0",
@@ -26,6 +25,7 @@
 		"react-router-transition": "^2.1.0",
 		"react-scripts": "4.0.3",
 		"react-scroll": "^1.8.2",
+		"sass": "^1.54.4",
 		"styled-components": "^5.2.3",
 		"styled-off-canvas": "^1.0.1",
 		"web-vitals": "^1.1.1"

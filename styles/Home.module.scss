@@ -1,0 +1,17 @@
+@import "../styles/vars";
+
+.container {
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-family: $headingFont;
+        font-weight: 700;
+        font-size: 3rem;
+        text-shadow: rgba(0, 0, 0, 0.167) 0px 0px 2rem;
+    }
+}

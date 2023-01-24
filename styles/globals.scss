@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700&family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700&family=Bree+Serif&family=Open+Sans:ital@0;1&display=swap");
 @import "./vars";
 
 *,
@@ -20,6 +20,8 @@ body,
 body {
     background: var(--bgColor);
     color: var(--textColor);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+    background-image: radial-gradient(circle 848px at 3.8% 67.2%, rgba(44, 45, 45, 1) 0%, rgba(16, 20, 18, 1) 90.1%);
 }
 
 .next-container {
@@ -27,6 +29,10 @@ body {
     min-height: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
 }
 
 :root {

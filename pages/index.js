@@ -39,7 +39,7 @@ export default function Home() {
                     <h3>
                         {width > 786 ? "Site Reliability Engineer " : "SRE "}@{" "}
                         <a href="https://www.media.net/" target={"_blank"} alt="Media.Net" rel="noreferrer">
-                            Media.Net
+                            Media<span>.</span>Net
                         </a>
                     </h3>
                     <h1>

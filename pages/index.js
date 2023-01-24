@@ -38,7 +38,7 @@ export default function Home() {
                 <div className={styles.highlight}>
                     <h3>
                         {width > 786 ? "Site Reliability Engineer " : "SRE "}@{" "}
-                        <a href="https://www.media.net/" target={"_blank"} alt="Media.Net">
+                        <a href="https://www.media.net/" target={"_blank"} alt="Media.Net" rel="noreferrer">
                             Media.Net
                         </a>
                     </h3>

@@ -94,7 +94,7 @@ export default function Home() {
                     <div className={s.social}>
                         {Object.values(socialDetails).map(e => {
                             return (
-                                <a href={e.url} key={nanoid()} rel={"no-referrer"} target={"_blank"} className={s.socialLink} style={{ background: e.bgColor }}>
+                                <a href={e.url} key={nanoid()} rel={"noreferrer"} target={"_blank"} className={s.socialLink} style={{ background: e.bgColor }}>
                                     <e.icon className={s.socialIcon} style={{ color: e.color }}></e.icon>
                                 </a>
                             );

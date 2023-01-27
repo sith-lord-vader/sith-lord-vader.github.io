@@ -10,6 +10,8 @@
     p {
         padding-right: 4rem;
         font-size: 0.9rem;
+        color: var(--textColor);
+        opacity: 0.9;
     }
 
     h1 {
@@ -70,7 +72,7 @@
     justify-content: center;
     align-items: flex-start;
 
-    div {
+    .spacer {
         width: 60%;
         height: 2px;
         background: rgba(245, 245, 245, 0.284);
@@ -110,6 +112,32 @@
     }
 }
 
+.social {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socialLink {
+    $radii: 3rem;
+    width: $radii;
+    height: $radii;
+    border-radius: 50%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.65rem;
+    line-height: $radii;
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 16px 0px;
+
+    &:hover {
+        box-shadow: rgb(0, 0, 0) 0px 0px 16px 0px;
+    }
+}
+
 @media only screen and (max-width: 786px) {
     .container {
         h1 {
@@ -139,7 +167,7 @@
         left: 0;
         background: rgba(0, 0, 0, 0.8);
 
-        div {
+        .spacer {
             width: 30%;
         }
     }

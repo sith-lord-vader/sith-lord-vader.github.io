@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import Head from "next/head";
 import { Fragment, useState } from "react";
 import { CgPexels, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/all";
@@ -93,7 +94,7 @@ export default function Home() {
                     <div className={s.social}>
                         {Object.values(socialDetails).map(e => {
                             return (
-                                <a href={e.url} referrerPolicy={"no-referrer"} target={"_blank"} className={s.socialLink} style={{ background: e.bgColor }}>
+                                <a href={e.url} key={nanoid()} rel={"no-referrer"} target={"_blank"} className={s.socialLink} style={{ background: e.bgColor }}>
                                     <e.icon className={s.socialIcon} style={{ color: e.color }}></e.icon>
                                 </a>
                             );

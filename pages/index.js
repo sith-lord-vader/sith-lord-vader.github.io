@@ -1,7 +1,8 @@
 import { nanoid } from "nanoid";
 import Head from "next/head";
 import { Fragment, useState } from "react";
-import { CgPexels, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/all";
+import { CgPexels } from "react-icons/cg";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import s from "../styles/Home.module.scss";
 import useWindowSize from "../utils/useWIndowDimensions";
 

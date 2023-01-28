@@ -21,7 +21,7 @@ body {
     background: var(--bgColor);
     color: var(--textColor);
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
-    background-image: radial-gradient(circle 848px at 3.8% 67.2%, rgba(44, 45, 45, 1) 0%, rgba(16, 20, 18, 1) 90.1%);
+    background-image: radial-gradient(circle 848px at 3.8% 67.2%, rgb(17, 17, 17) 0%, rgba(16, 20, 18, 1) 90.1%);
 }
 
 .next-container {
@@ -31,7 +31,8 @@ body {
     grid-template-rows: 1fr auto;
 }
 
-p {
+p,
+a {
     font-family: "Open Sans", sans-serif;
 }
 

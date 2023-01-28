@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import Head from "next/head";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { CgPexels } from "react-icons/cg";
 import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import s from "../styles/Home.module.scss";
@@ -40,6 +40,25 @@ export default function Home() {
             bgColor: "#4267B2"
         }
     });
+
+    const [coords, setCoords] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        const handleWindowMouseMove = event => {
+            let x = event.clientX / (window.visualViewport.width / 2) - 1;
+            let y = event.clientY / (window.visualViewport.height / 2) - 1;
+
+            setCoords({
+                x,
+                y
+            });
+        };
+        window.addEventListener("mousemove", handleWindowMouseMove);
+
+        return () => {
+            window.removeEventListener("mousemove", handleWindowMouseMove);
+        };
+    }, []);
     return (
         <Fragment>
             <Head>
@@ -70,41 +89,44 @@ export default function Home() {
             </Head>
 
             <div className={s.container}>
-                <div className={s.highlight}>
-                    <h3>
-                        {width > 786 ? "Site Reliability Engineer " : "SRE "}@{" "}
-                        <a href="https://www.media.net/" target={"_blank"} alt="Media.Net" rel="noreferrer">
-                            Media<span>.</span>Net
-                        </a>
-                    </h3>
-                    <h1>
-                        <span>Hi, I am</span>
-                        {width > 786 ? " " : <br></br>}
-                        <div>Abhishek Adhikari</div>
-                    </h1>
+                <div className={s.mainSection}>
+                    <div className={s.highlight}>
+                        <h3>
+                            {width > 786 ? "Site Reliability Engineer " : "SRE "}@{" "}
+                            <a href="https://www.media.net/" target={"_blank"} alt="Media.Net" rel="noreferrer">
+                                Media<span>.</span>Net
+                            </a>
+                        </h3>
+                        <h1>
+                            <span>Hi, I am</span>
+                            {width > 786 ? " " : <br></br>}
+                            <div>Abhishek Adhikari</div>
+                        </h1>
 
-                    <div className={s.spacer}></div>
+                        <div className={s.spacer}></div>
 
-                    <p>
-                        I am a highly motivated SRE with a deep understanding of Full-Stack Development. Using my knowledge of React, Ionic, and Next.js, I am able to build
-                        responsive and intuitive applications that deliver exceptional performance. My background in system administration and infrastructure management makes me
-                        well-suited to ensure the availability and scalability of the systems I work on. I am committed to staying on the cutting edge of technology and am always
-                        looking for new challenges and opportunities to grow.
-                    </p>
+                        <p>
+                            I am a highly motivated SRE with a deep understanding of Full-Stack Development. Using my knowledge of React, Ionic, and Next.js, I am able to build
+                            responsive and intuitive applications that deliver exceptional performance. My background in system administration and infrastructure management makes
+                            me well-suited to ensure the availability and scalability of the systems I work on. I am committed to staying on the cutting edge of technology and am
+                            always looking for new challenges and opportunities to grow.
+                        </p>
 
-                    <div className={s.social}>
-                        {Object.values(socialDetails).map(e => {
-                            return (
-                                <a href={e.url} key={nanoid()} rel={"noreferrer"} target={"_blank"} className={s.socialLink} style={{ background: e.bgColor }}>
-                                    <e.icon className={s.socialIcon} style={{ color: e.color }}></e.icon>
-                                </a>
-                            );
-                        })}
+                        <div className={s.social}>
+                            {Object.values(socialDetails).map(e => {
+                                return (
+                                    <a href={e.url} key={nanoid()} rel={"noreferrer"} target={"_blank"} className={s.socialLink} style={{ background: e.bgColor }}>
+                                        <e.icon className={s.socialIcon} style={{ color: e.color }}></e.icon>
+                                    </a>
+                                );
+                            })}
+                        </div>
                     </div>
-                </div>
-                <div className={s.highlightImage}>
-                    <div></div>
-                    <article></article>
+                    <div className={s.highlightImage}>
+                        <div style={{ backgroundPositionX: `calc(50% + ${coords.x * 2}px)`, backgroundPositionY: `calc(50% + ${coords.y * 2}px)` }}></div>
+                        <article></article>
+                    </div>
+                    <div className={s.arrow}></div>
                 </div>
             </div>
         </Fragment>

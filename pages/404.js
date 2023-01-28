@@ -2,12 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import Favicon from "../components/Favicon";
 import marioImg from "../images/mario-run.gif";
 import s from "../styles/404.module.scss";
 
 export default function FourOhFour() {
     return (
         <>
+            <Favicon></Favicon>
             <Head>
                 <title>It&apos;s Mario Time | Abhishek Adhikari | SRE, Full-Stack Developer, Traveler</title>
                 <meta name="title" content="Abhishek Adhikari | SRE, Full-Stack Developer, Traveler" />

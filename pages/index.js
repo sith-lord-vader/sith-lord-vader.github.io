@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 import { CgPexels } from "react-icons/cg";
 import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Favicon from "../components/Favicon";
 import s from "../styles/Home.module.scss";
 import useWindowSize from "../utils/useWIndowDimensions";
 
@@ -61,6 +62,7 @@ export default function Home() {
     }, []);
     return (
         <Fragment>
+            <Favicon></Favicon>
             <Head>
                 <title>Abhishek Adhikari | SRE, Full-Stack Developer, Traveler</title>
                 <meta name="title" content="Abhishek Adhikari | SRE, Full-Stack Developer, Traveler" />

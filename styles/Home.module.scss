@@ -21,6 +21,11 @@
         font-size: 0.9rem;
         color: var(--textColor);
         opacity: 0.9;
+
+        animation: highlight 0.8s ease-in 0.8s;
+        animation-fill-mode: forwards;
+        transform: translateX(-32px);
+        opacity: 0;
     }
 
     h1 {
@@ -30,6 +35,12 @@
         text-shadow: rgba(0, 0, 0, 0.167) 0px 0px 2rem;
         color: #54bab9;
         margin-bottom: 1.5rem;
+
+        animation: highlight 1s ease-in 0.1s;
+        animation-fill-mode: forwards;
+        transform: translateX(-32px);
+        opacity: 0;
+
         span {
             color: var(--textColor);
         }
@@ -53,7 +64,11 @@
         margin-bottom: 1rem;
         font-size: 1.5rem;
         color: rgba(255, 255, 255, 0.632);
-        // color: #71e190;
+
+        animation: highlight 0.8s ease-in 0.4s;
+        animation-fill-mode: forwards;
+        transform: translateX(-32px);
+        opacity: 0;
 
         a {
             color: #f01e32;
@@ -130,6 +145,7 @@
     margin-top: 2rem;
     display: flex;
     gap: 1.5rem;
+    transform: translateX(-32px);
 }
 
 .socialLink {
@@ -146,6 +162,23 @@
     line-height: $radii;
 
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 16px 0px;
+
+    transform: translateX(32px);
+    transition: transform 1s ease-in 1s;
+
+    // &:nth-of-type(1) {
+    //     animation: highlight 1s ease-in 2s;
+    //     animation-fill-mode: forwards;
+    //     transform: translateX(-32px);
+    //     opacity: 0;
+    // }
+
+    // &:nth-of-type(1) {
+    //     animation: highlight 1s ease-in 4s;
+    //     animation-fill-mode: forwards;
+    //     transform: translateX(-32px);
+    //     opacity: 0;
+    // }
 
     &:hover {
         box-shadow: rgb(0, 0, 0) 0px 0px 24px 0px;
@@ -242,5 +275,16 @@
     100% {
         opacity: 0;
         transform: translate(-10px, -10px);
+    }
+}
+
+@keyframes highlight {
+    0% {
+        transform: translateX(-32px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
     }
 }

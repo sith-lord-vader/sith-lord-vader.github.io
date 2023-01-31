@@ -142,6 +142,7 @@
 }
 
 .social {
+    width: 100%;
     margin-top: 2rem;
     display: flex;
     gap: 1.5rem;
@@ -251,11 +252,20 @@
         top: 0;
         left: 0;
         background: rgba(0, 0, 0, 0.8);
-        padding: 1rem 1rem 1rem 2.5rem;
+        padding: 1rem 2rem 1rem 2rem;
 
         .spacer {
             width: 30%;
         }
+    }
+
+    .social {
+        justify-content: space-between;
+        gap: unset;
+    }
+
+    .arrow {
+        display: none;
     }
 }
 

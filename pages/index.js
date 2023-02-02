@@ -11,7 +11,7 @@ export default function Home() {
     const { width, height } = useWindowSize();
     const [socialDetails, setSocialDetails] = useState({
         github: {
-            url: "https://github.com/abhishekadhikari23",
+            url: "https://github.com/sith-lord-vader",
             icon: FaGithub,
             color: "#ffffff",
             bgColor: "#282d3f"
